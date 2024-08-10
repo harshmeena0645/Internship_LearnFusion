@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <form id="ageForm">
+            <label for="dob">Enter your date of birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <button type="submit">Calculate Age</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <div class="container">
+        <h1>Age Between Two Dates</h1>
+        <form id="ageBetweenDatesForm">
+            <label for="startDate">Enter the start date:</label>
+            <input type="date" id="startDate" name="startDate" required>
+            <label for="endDate">Enter the end date:</label>
+            <input type="date" id="endDate" name="endDate" required>
+            <button type="submit">Calculate Age Between Dates</button>
+        </form>
+        <p id="resultBetweenDates"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
