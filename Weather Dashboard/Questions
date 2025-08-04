@@ -1,0 +1,50 @@
+Your Weather Dashboard project is solid — great job incorporating API calls, a responsive UI, and interactive maps using Leaflet.
+
+
+✅ 1. What technologies did you use in this project?
+I used HTML, CSS, and JavaScript for the frontend. I integrated Leaflet.js for displaying maps and used the OpenWeatherMap API to fetch real-time weather and forecast data. The dashboard is responsive and user-friendly, with a clean UI and dynamic content updates.
+
+
+✅ 2. How does your app fetch weather and forecast data?
+It uses the Fetch API in JavaScript to send GET requests to OpenWeatherMap endpoints. The weather API (/weather) gives current conditions, and the forecast API (/forecast) provides 5-day data in 3-hour intervals. I extract relevant info from the response and update the DOM dynamically.
+
+
+✅ 3. How did you handle asynchronous operations in your code?
+I used async/await syntax for handling asynchronous fetch requests. This ensures clean and readable code, and it makes sure the UI only updates after the data is fully retrieved and parsed.
+
+
+✅ 4. How does the Leaflet map update when a new city is searched?
+When a city is searched, I get its latitude and longitude from the weather API response. If the map is already initialized, I simply update the map view and move the marker to the new coordinates. If it's not initialized yet, I create the map using L.map() and add a marker with L.marker().
+
+
+✅ 5. What did you do to make the dashboard responsive?
+I used CSS Grid in the main section and added media queries to switch to a single-column layout on smaller screens. I also used relative units and flexbox for layout adjustments.
+
+
+✅ 6. How did you style the user input and button?
+By modern UI practices:
+• Rounded corners
+• Shadows for depth
+• Hover effects on the button
+• Input has custom placeholder styling and no outline for better aesthetics.
+
+
+✅ 7. What improvements would you add if you had more time?
+• Add error handling for invalid city names or network errors
+• Show loading indicators while data is being fetched
+• Add local storage to keep recent searches
+• Include charts for better forecast visualization
+• Option to select temperature in Celsius or Fahrenheit
+
+
+✅ 8. How did you format and display the 5-day forecast data?
+The forecast API gives data every 3 hours. To simplify, I used only every 8th item (index % 8 === 0), which gives one reading per day, roughly at the same time. This makes it cleaner and easier for users to understand.
+
+
+✅ 9. Why did you choose Leaflet over Google Maps?
+Leaflet is lightweight, open-source, easy to use, and doesn't require an API key. It’s a great fit for small projects and quick implementations like this one.
+
+
+✅ 10. How do you ensure user input is handled properly?
+I check if the input is empty and show an alert before making the API call. I could extend this to validate city names or add autocomplete using city lists.
+
